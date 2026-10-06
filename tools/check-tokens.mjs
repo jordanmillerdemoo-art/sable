@@ -1,5 +1,5 @@
 import { readFile, readdir } from 'node:fs/promises';
-const tokens = await readFile(new URL('../../tokens.css', import.meta.url), 'utf8');
+const tokens = await readFile(new URL('../tokens.css', import.meta.url), 'utf8');
 const definitions = new Set([...tokens.matchAll(/(--[\w-]+)\s*:/g)].map(match => match[1]));
 for (const name of await readdir(new URL('../src/', import.meta.url))) {
   if (!name.endsWith('.css')) continue;

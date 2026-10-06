@@ -1,0 +1,425 @@
+/* SABLE / The Receipt Press. All visual values live here. */
+/* Selected C refinement: scoped geometry and finite choreography. */
+:root {
+  --site-section-grid: minmax(0,1fr);
+  --site-protocol-grid: minmax(0,1fr);
+  --site-row-grid: var(--space-40) minmax(0,1fr);
+  --site-observer-grid: minmax(0,1fr);
+  --site-output-grid: minmax(0,1fr);
+  --site-output-align: start;
+  --site-inspector-position: static;
+  --site-nav-gap: var(--space-24);
+  --site-hero-title: clamp(2.25rem,4.2vw,3.75rem);
+  --site-section-number-size: var(--font-size-label);
+  --site-receipt-display: clamp(2.5rem,4vw,4rem);
+  --site-receipt-max: 38rem;
+  --site-header-grid: auto 1fr auto;
+  --site-figure-height: 16rem;
+  --site-index-width: var(--space-64);
+  --site-access-grid: minmax(0,1fr);
+  --site-footer-grid: minmax(0,1fr);
+  --site-intro-grid: minmax(0,1fr);
+  --site-hero-padding: var(--space-24);
+  --site-opening-display: block;
+  --site-hero-textarea: var(--refined-form-height);
+  --site-preset-column: 2;
+  --site-preset-offset: var(--space-zero);
+  --site-depth-shift: var(--space-zero);
+  --duration-download-cleanup: 5000ms;
+  --site-hero-output-display: contents;
+  --site-hero-output-column: auto;
+  --site-hero-output-row: auto;
+  --site-hero-receipt-order: 6;
+  --site-hero-answer-order: 5;
+  --site-hero-payment-order: 7;
+  --site-hero-boundary-order: 8;
+  --site-hero-receipt-padding: var(--space-20);
+  --site-hero-receipt-title: clamp(1.75rem,2.4vw,2.125rem);
+  --site-hero-answer-gap: var(--space-16);
+  --site-hero-opening-columns: var(--site-intro-grid);
+  --site-hero-opening-gap: var(--space-16);
+  --site-hero-title-break: initial;
+  --site-header-min: var(--size-header);
+  --site-header-padding: var(--space-20);
+  --site-hero-deck-size: var(--font-size-compact);
+  --site-hero-composition-gap: var(--space-16);
+  --site-hero-request-label-gap: var(--space-zero);
+  --site-hero-form-padding: var(--space-12);
+  --site-hero-opening-margin: var(--space-24);
+  --site-hero-cipher-packet-width: 12rem;
+  --site-hero-inference-position: absolute;
+  --site-hero-inference-top: var(--space-zero);
+  --site-access-cue-display: block;
+  --site-access-cue-gap: var(--space-4);
+  --site-opening-deck-leading: var(--line-height-label);
+  --site-hero-opening-margin: var(--space-8);
+}
+@media (min-width:48rem) {
+  :root {
+    --site-section-grid: var(--space-64) minmax(0,1fr);
+    --site-protocol-grid: minmax(0,1fr) minmax(0,2fr);
+    --site-row-grid: var(--space-40) minmax(0,1fr) minmax(0,1.5fr);
+    --site-output-grid: minmax(0,5fr) minmax(0,4fr);
+    --site-observer-grid: minmax(0,2fr) minmax(0,3fr);
+    --site-footer-grid: minmax(0,2fr) minmax(0,1fr);
+    --site-access-grid: minmax(0,1fr) minmax(0,1fr);
+    --site-intro-grid: minmax(0,1.3fr) minmax(0,1fr);
+    --site-preset-column: auto;
+    --site-hero-output-display: flex;
+    --site-hero-output-column: 2;
+    --site-hero-output-row: 1 / 3;
+    --site-hero-receipt-order: 1;
+    --site-hero-answer-order: 2;
+    --site-hero-deck-size: var(--font-size-body);
+    --site-hero-composition-gap: var(--space-24);
+    --site-hero-request-label-gap: var(--space-20);
+    --site-hero-form-padding: var(--space-16);
+    --site-hero-inference-position: static;
+    --site-hero-inference-top: auto;
+    --site-access-cue-display: none;
+    --site-opening-deck-leading: var(--line-height-body);
+    --site-hero-opening-margin: var(--space-24);
+  }
+}
+@media (min-width:72rem) {
+  :root {
+    --site-inspector-position: sticky;
+    --site-figure-height: 22rem;
+    --site-hero-padding: var(--space-32);
+    --site-opening-display: grid;
+    --site-hero-textarea: var(--space-80);
+    --site-hero-output-column: 4;
+    --site-hero-output-row: auto;
+    --site-hero-payment-order: 1;
+    --site-hero-boundary-order: 2;
+    --site-hero-opening-columns: minmax(0,1fr);
+    --site-hero-opening-gap: var(--space-12);
+    --site-hero-title-break: none;
+    --site-hero-padding: var(--space-16);
+    --site-header-min: var(--space-64);
+    --site-header-padding: var(--space-16);
+    --site-hero-opening-margin: var(--space-8);
+  }
+}
+:root {
+  --refined-title: clamp(2.625rem, 4.2vw, 3.75rem);
+  --refined-intro-width: var(--width-site);
+  --refined-request-display: contents;
+  --refined-columns: minmax(0,1fr);
+  --refined-gap: var(--space-24);
+  --refined-payment-order: 6;
+  --refined-boundary-order: 7;
+  --refined-request-order: 1;
+  --refined-receipt-order: 2;
+  --refined-receipt-row: auto;
+  --refined-receipt-column: auto;
+  --refined-form-height: 5rem;
+  --refined-enclave-height: 15rem;
+  --refined-boundary-writing: horizontal-tb;
+  --refined-boundary-border: var(--border-thin) solid var(--color-line);
+  --refined-boundary-width: auto;
+  --refined-signal-travel: 7rem;
+  --refined-aperture-left: 27%;
+  --refined-aperture-top: 48%;
+  --refined-origin-left: 75%;
+  --refined-origin-top: 52%;
+  --refined-flight-width: 10rem;
+  --refined-flight-receipt-width: 12rem;
+  --refined-flight-origin: center;
+  --refined-receipt-title: clamp(2rem, 3vw, 3rem);
+  --refined-panel-grid: minmax(0,1fr) minmax(0,1fr);
+  --refined-transform-duration: 900ms;
+  --refined-shell-shift-x: -0.75rem;
+  --refined-shell-shift-y: -0.25rem;
+  --opacity-none: 0;
+  --refined-transit-duration: 1300ms;
+  --refined-inference-duration: 1900ms;
+  --refined-output-duration: 1100ms;
+  --refined-route-gap: var(--space-64);
+}
+@media (min-width:48rem) {
+  :root {
+    --refined-request-display: block;
+    --refined-columns: minmax(0,1.2fr) minmax(0,1fr);
+    --refined-receipt-row: 1 / 3;
+    --refined-receipt-column: 2;
+    --refined-boundary-order: 3;
+    --refined-enclave-height: 18rem;
+  }
+}
+@media (min-width:72rem) {
+  :root {
+    --refined-columns: minmax(0,1.1fr) var(--space-48) minmax(0,3.1fr) minmax(0,2.3fr);
+    --refined-gap: var(--space-24);
+    --refined-payment-order: 1;
+    --refined-boundary-order: 2;
+    --refined-request-order: 3;
+    --refined-receipt-order: 4;
+    --refined-receipt-row: auto;
+    --refined-receipt-column: auto;
+    --refined-boundary-writing: vertical-rl;
+    --refined-enclave-height: 17rem;
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  :root { --refined-transform-duration:0ms; --refined-transit-duration:0ms; --refined-inference-duration:0ms; --refined-output-duration:0ms; }
+}
+/* Hero-test additions: original SVG coordinates, compositional grids, and object geometry.
+   viewBox 0 0 1000 600 is an intrinsic vector coordinate system, not a CSS dimension. */
+:root {
+  --instrument-cast: path('M165 438 L724 512 L980 360 L429 285 Z');
+  --instrument-rear: path('M200 160 L665 40 L665 400 L200 520 Z');
+  --instrument-edge: path('M665 40 L695 60 L695 420 L665 400 Z');
+  --instrument-seam: path('M350 180 L820 60 L820 65 L350 185 Z');
+  --instrument-front: path('M350 180 L820 60 L820 420 L350 540 Z');
+  --instrument-lip: path('M315 160 L350 180 L350 540 L315 520 Z');
+  --hero-test-payment-grid: minmax(0, 1fr);
+  --hero-test-evidence-grid: minmax(0, 1fr);
+  --hero-test-void: var(--space-80);
+  --hero-test-art-height: 22rem;
+  --hero-test-monument-height: 28rem;
+  --hero-test-form-width: var(--width-full);
+  --hero-test-field-layout: flex;
+  --hero-test-title-width: var(--width-full);
+  --hero-test-title-C: var(--font-size-display);
+  --hero-test-receipt-top: var(--space-zero);
+  --hero-test-object-span: auto;
+  --hero-test-input-top: var(--space-zero);
+  --hero-test-mark-width: 6rem;
+  --hero-test-mark-height: 4rem;
+  --hero-test-mark-clip: polygon(0 35%, 65% 0, 100% 20%, 100% 65%, 35% 100%, 0 80%);
+  --hero-test-receipt-clip: polygon(0 0, 100% 0, 100% calc(100% - var(--size-receipt-notch)), calc(100% - var(--size-receipt-notch)) 100%, 0 100%);
+  --hero-test-header-note: none;
+  --hero-test-output-grid: minmax(0, 1fr);
+  --hero-test-packet-left: 35%;
+  --hero-test-packet-top: 35%;
+  --hero-test-evidence-group: contents;
+}
+@media (min-width: 48rem) {
+  :root {
+    --hero-test-payment-grid: minmax(0, 1fr) minmax(0, 3fr);
+    --hero-test-evidence-grid: minmax(0, 5fr) minmax(0, 6fr);
+    --hero-test-art-height: 30rem;
+    --hero-test-monument-height: 42rem;
+    --hero-test-title-C: clamp(2.625rem, 4.7vw, 4.75rem);
+    --hero-test-header-note: inline;
+    --hero-test-evidence-group: block;
+  }
+}
+@media (min-width: 72rem) {
+  :root {
+    --hero-test-void: var(--space-128);
+    --hero-test-art-height: 35rem;
+    --hero-test-monument-height: 42rem;
+    --hero-test-form-width: 27rem;
+    --hero-test-field-layout: grid;
+    --hero-test-title-width: 78%;
+    --hero-test-receipt-top: var(--space-64);
+    --hero-test-object-span: 1 / -1;
+    --hero-test-input-top: var(--space-64);
+    --hero-test-output-grid: var(--grid-output);
+  }
+}
+:root {
+  color-scheme: light;
+
+  /* Light field, paper object, and opaque recess. */
+  --color-bg: #F1ECE2;
+  --color-surface-paper: #FAF7F0;
+  --color-surface-recess: #E7E0D5;
+  --color-text: #211D1A;
+  --color-text-muted: #655C53;
+  --color-text-accent: #B33323;
+  --color-accent: #B33323;
+  --color-on-accent: #FAF7F0;
+  --color-on-ink: #FAF7F0;
+  --color-ink: #211D1A;
+  --color-line: #C7BEB0;
+  --color-control-line: #655C53;
+  --color-shadow: #211D1A;
+  --color-focus: #211D1A;
+  --color-transparent: transparent;
+
+  --font-display: "Azeret Mono", monospace;
+  --font-heading: "Azeret Mono", monospace;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-evidence: "Azeret Mono", monospace;
+  --font-size-display: clamp(2.625rem, 6.5vw, 6.625rem);
+  --font-size-section: clamp(2rem, 3.8vw, 4rem);
+  --font-size-heading: clamp(1.25rem, 2vw, 1.75rem);
+  --font-size-body: 1.125rem;
+  --font-size-compact: 1rem;
+  --font-size-label: 0.875rem;
+  --font-size-wordmark: clamp(1.25rem, 1.8vw, 1.75rem);
+  --font-size-footer: clamp(3rem, 12vw, 10rem);
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-display: 1.04;
+  --line-height-heading: 1.12;
+  --line-height-body: 1.6;
+  --line-height-evidence: 1.45;
+  --line-height-label: 1.4;
+  --tracking-display: -0.055em;
+  --tracking-heading: -0.035em;
+  --tracking-body: 0em;
+  --tracking-label: 0.08em;
+  --tracking-wordmark: 0.04em;
+
+  --space-zero: 0rem;
+  --space-2: 0.125rem;
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-40: 2.5rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-80: 5rem;
+  --space-96: 6rem;
+  --space-128: 8rem;
+  --space-160: 10rem;
+  --gutter: clamp(1.25rem, 4.5vw, 4rem);
+  --section-space: clamp(4rem, 8vw, 8rem);
+  --receipt-padding: clamp(1.5rem, 2.5vw, 2rem);
+
+  --width-site: 84rem;
+  --width-reading: 42rem;
+  --width-short-copy: 32rem;
+  --width-receipt: 24rem;
+  --width-answer: 28rem;
+  --width-full: 100%;
+  --width-viewport: 100vw;
+  --height-viewport: 100svh;
+  --size-header: 4.5rem;
+  --size-control-min: 3rem;
+  --size-textarea-min: 7rem;
+  --size-textarea-max: 16rem;
+  --size-icon: 1.25rem;
+  --size-rail: 0.25rem;
+  --size-rail-length: 3rem;
+  --size-receipt-notch: 1rem;
+  --size-rule-gap: 1.25rem;
+  --aspect-receipt: 4 / 5;
+  --aspect-answer: 5 / 4;
+  --border-thin: 1px;
+  --border-strong: 2px;
+  --radius-none: 0rem;
+  --radius-control: 0.125rem;
+  --radius-round: 50%;
+  --focus-width: 2px;
+  --focus-offset: 4px;
+
+  --shadow-blur: 0rem;
+  --shadow-offset-control: 0.25rem;
+  --shadow-offset-object: 0.75rem;
+  --shadow-control: var(--shadow-offset-control) var(--shadow-offset-control) var(--shadow-blur) var(--color-shadow);
+  --shadow-object: var(--shadow-offset-object) var(--shadow-offset-object) var(--shadow-blur) var(--color-shadow);
+  --shadow-none: none;
+  --opacity-full: 1;
+  --opacity-cast-shadow: 0.16;
+  --opacity-disabled: 0.55;
+
+  --duration-instant: 0ms;
+  --duration-fast: 160ms;
+  --duration-panel: 280ms;
+  --duration-object: 480ms;
+  --duration-stage: 700ms;
+  --duration-separate: 900ms;
+  --ease-settle: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-precise: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-linear: linear;
+  --translate-rest: 0rem;
+  --translate-hover: -0.125rem;
+  --translate-output: 2rem;
+  --rotate-rest: 0deg;
+  --rotate-receipt: -2deg;
+  --rotate-instrument-plane: -8deg;
+  --scale-rest: 1;
+  --scale-pressed: 0.99;
+  --scale-concealed: 0.94;
+  --motion-parallax-range: 0rem;
+  --motion-parallax-output: 0rem;
+  --motion-enabled: 1;
+
+  --layer-base: 0;
+  --layer-object: 1;
+  --layer-controls: 2;
+  --layer-menu: 10;
+  --layer-focus: 20;
+
+  /* Mobile geometry. Responsive dimensions change here, not in components. */
+  --grid-columns: 4;
+  --grid-gap: var(--space-16);
+  --grid-editorial: minmax(0, 1fr);
+  --grid-output: minmax(0, 1fr);
+  --grid-workbench: minmax(0, 1fr);
+  --grid-use-cases: minmax(0, 1fr);
+  --grid-privacy: minmax(0, 1fr);
+  --index-width: 3rem;
+  --hero-field-min: 30rem;
+  --hero-image-aspect: 4 / 5;
+  --hero-object-width: 86%;
+  --receipt-specimen-width: min(100%, var(--width-receipt));
+  --nav-links-display: none;
+  --nav-menu-display: inline-flex;
+  --inspector-position: static;
+  --inspector-top: var(--space-24);
+  --section-heading-width: var(--width-full);
+}
+
+/* Source breakpoint: tablet 48rem. */
+@media (min-width: 48rem) {
+  :root {
+    --grid-columns: 6;
+    --grid-gap: var(--space-24);
+    --grid-editorial: var(--index-width) minmax(0, 1fr);
+    --grid-output: minmax(0, 5fr) minmax(0, 4fr);
+    --grid-use-cases: minmax(0, 1fr) minmax(0, 2fr);
+    --grid-privacy: minmax(0, 2fr) minmax(0, 3fr);
+    --hero-field-min: 36rem;
+    --hero-image-aspect: 16 / 10;
+    --hero-object-width: 68%;
+    --nav-links-display: flex;
+    --nav-menu-display: none;
+  }
+}
+
+/* Source breakpoint: desktop 72rem. */
+@media (min-width: 72rem) {
+  :root {
+    --grid-columns: 12;
+    --size-header: 5rem;
+    --grid-workbench: minmax(0, 7fr) minmax(0, 5fr);
+    --hero-field-min: 40rem;
+    --hero-image-aspect: 16 / 9;
+    --hero-object-width: 60%;
+    --motion-parallax-range: 1rem;
+    --motion-parallax-output: 0.5rem;
+    --inspector-position: sticky;
+    --inspector-top: var(--space-32);
+    --section-heading-width: 72%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-panel: 0ms;
+    --duration-object: 0ms;
+    --duration-stage: 0ms;
+    --duration-separate: 0ms;
+    --translate-hover: 0rem;
+    --translate-output: 0rem;
+    --rotate-receipt: 0deg;
+    --motion-parallax-range: 0rem;
+    --motion-parallax-output: 0rem;
+    --motion-enabled: 0;
+    --scale-pressed: 1;
+    --scale-concealed: 1;
+  }
+}
