@@ -1,0 +1,17 @@
+# Full-build validation
+
+Production build passes TypeScript checking, design-token-reference checking and Vite bundling. After final user-authorized polish, output is 22.58KB HTML, 47.65KB CSS and 14.67KB JavaScript before compression. Self-hosted open-font assets/licences are preserved.
+
+Latest isolated Lighthouse mobile performance after final polish: 95. FCP/LCP 2.1s; TBT 0ms; CLS 0.031. Report: lighthouse-final-polish-performance.report.json/html. This meets the >=90 target. Comparison/investigation against prior 99 is recorded in FINAL-POLISH.md; no lucky-score repeat was attempted. The initial all-category audit recorded accessibility 100, best practices 100 and SEO 100. Reports are retained. Focused repeats audit performance only.
+
+Responsive and visual checks at 375, 768 and 1440: no horizontal overflow; all sections present; interactive controls legible; original receipt identity repeated in the substantial workbench; mobile menu usable; first desktop viewport contains prompt/action, receipt identity and most of the unchanged-scale instrument. Screenshots are in screenshots/final-*-ready.png; finite interaction and reduced-motion evidence are recorded alongside them.
+
+Behavior passed: full request/concealment/cipher/relay/aperture/inference/split/completion sequence; unchanged independent payment island; keyboard initiation; empty input; duplicate-run prevention; reset during movement; width-change cancellation; skip; independently inspectable receipt; focus into full inspector; field selection; explicit shared answer reveal; clearing the draft/session; five privacy observers; accurate plaintext enclave explanation; local sample access changes; native FAQ; sample preset focus without automatic execution; reduced-motion narrative with no active animations; no JavaScript errors.
+
+The download action's actual Blob payload is sample-only and unverified. Keys: sample, verified, schema, id, model, environment, workload, freshness, completion. A distinctive visitor draft was excluded, as were answer and payment data. Critique fix 1 corrected production CSS time-unit parsing for animation and the download cleanup timer. Native saving now succeeds: browser download failure null, saved artifact `sample-export.json`. Earlier disk pressure was not established as the sole cause of cancellation. No unrelated host cleanup was attempted.
+
+Critique-1's three fixes have dedicated evidence in `FIX-1.md`. Fresh responsive captures show the numbered compact hero receipt and complete desktop instrument. Natural 375×900 submission first shows aperture entry, then follows the journey once so processing and both split destinations/actions remain visible; user scrolling overrides that follow. Reduced motion completes immediately without active animations and retains sample ciphertext. Independent answer opening and receipt inspection still pass.
+
+Final polish preserves the production sequence, shared CSS time parser, actual SVG entry/output anchors, one-time mobile follow, ordinary user scrolling, independent outputs and native sample-only export. Reduced motion retains the static narrative with zero active animations and no forced scrolling. New opening captures at 375, 768 and 1440 and motion evidence are listed in FINAL-POLISH.md. Critique 2 passed; main chat owns conditional approval completion and state/history recording.
+
+No backend, wallet SDK, payment integration, model API, storage of prompts, deployment, git commit or push was added.

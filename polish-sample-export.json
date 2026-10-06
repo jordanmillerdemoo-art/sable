@@ -1,0 +1,11 @@
+{
+  "sample": true,
+  "verified": false,
+  "schema": "sable.sample.receipt.v1",
+  "id": "SAMPLE-RECEIPT-01",
+  "model": "SABLE demo model",
+  "environment": "GPU enclave · simulated",
+  "workload": "Inference · sample",
+  "freshness": "Demo session · sample",
+  "completion": "Sample complete"
+}

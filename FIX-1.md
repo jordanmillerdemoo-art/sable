@@ -1,0 +1,11 @@
+# Critique 1 fixes
+
+Production preview: http://127.0.0.1:4175/
+
+1. Shared CSS time parsing accepts both `s` and `ms`, including minified decimal seconds. Production playback traverses encrypting, transit, entry, processing, split and completion over approximately ten seconds on this browser; it no longer collapses into 113 ms. The download cleanup timer uses the same parser. Native download succeeded and is retained as `sample-export.json` (failure null). Receipt inspection keeps the answer sealed; explicit answer opening reveals it.
+2. Mobile order is prompt, relay, enclave, answer, compact receipt, payment. Receipt keeps `SAMPLE-RECEIPT-01`, essential environment evidence, sample status and Inspect action; full fields remain in the workbench. Natural 375×900 submission shows aperture entry at y847–863. During processing a one-time smooth follow positions the instrument at y32–345, answer at y381–529, receipt identity/fields below it and Inspect at y830–878. The receipt's final scope footer continues below the viewport. Both split packets visibly travel into their separate on-screen output destinations. The follow is skipped when the visitor has already scrolled; normal scrolling remains available.
+3. At 1440×900, the prompt action, visibly numbered receipt, Inspect action, sealed-answer destination and complete instrument with attested/protected/inference labels fit in the opening. The independent payment gap remains intact.
+
+Build passes TypeScript, token-reference validation and Vite. Focused browser checks also pass reset during travel and reduced-motion completion (zero active animations, sample ciphertext retained, answer sealed). Static screenshots were recaptured at 375, 768 and 1440. Isolated mobile Lighthouse performance is **99**: FCP 1.5 s, LCP 1.7 s, TBT 100 ms, CLS 0. Browser was restored to 1440×900 ready, reducedMotion=no-preference, and released for independent review.
+
+Evidence: `screenshots/fix-1-final-{375,768,1440}.png` and matching `fix-1-full-*` captures; `fix-1-mobile-entry.png`, `fix-1-mobile-processing.png`, `fix-1-mobile-split.png`, `fix-1-mobile-reduced.png`. The isolated performance report is retained as `lighthouse-fix-1-performance.report.json/html`.
